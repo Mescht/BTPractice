@@ -1,4 +1,4 @@
-execute at @a run spreadplayers ~ ~ 0 32 false @a
+execute at 0-0-0-0-AEC run spreadplayers ~ ~ 0 32 false @a
 
 gamemode survival @a
 #replaceitem entity @a weapon.mainhand minecraft:golden_shovel

@@ -17,3 +17,6 @@ tellraw @a {"text":"[To New BT]","color":"gold","clickEvent":{"action":"run_comm
 gamerule doDaylightCycle false
 gamerule doWeatherCycle false
 gamerule sendCommandFeedback false
+gamerule spectatorsGenerateChunks false
+
+execute as @a[tag=debug] run gamerule sendCommandFeedback true
