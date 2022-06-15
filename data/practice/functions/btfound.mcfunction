@@ -1,7 +1,7 @@
 execute at 0-0-0-0-AEC run spreadplayers ~ ~ 0 32 false @a
 
 gamemode survival @a
-replaceitem entity @a weapon.mainhand minecraft:golden_shovel{Unbreakable:1b}
+execute if score shovel settings matches 1 run replaceitem entity @a weapon.mainhand minecraft:golden_shovel{Unbreakable:1b}
 
 tellraw @a {"text":"Found BT!","color":"dark_green"}
 tellraw @a {"text":"[To New BT]","color":"gold","clickEvent":{"action":"run_command","value":"/function practice:findbt"}}
