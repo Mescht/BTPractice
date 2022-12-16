@@ -43,4 +43,3 @@ gamerule sendCommandFeedback false
 gamerule spectatorsGenerateChunks false
 
 scoreboard players reset * relog
-scoreboard players enable @a s

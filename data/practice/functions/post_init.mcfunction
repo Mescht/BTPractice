@@ -3,3 +3,5 @@ tellraw @a [{"text":"BT Practice ","color":"green","hoverEvent":{"action":"show_
 tellraw @a [{"text":"/trigger s ","color":"gray"},{"text":"for Settings Menu","color":"white"}]
 
 tellraw @a {"text":"[To New BT]","color":"gold","clickEvent":{"action":"run_command","value":"/function practice:findbt"}}
+
+scoreboard players enable @a s
