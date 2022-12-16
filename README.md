@@ -1,5 +1,5 @@
 # BTPractice
-Map / Datapack to practice Mapless Buried Treasure
+Map / Datapack for practicing Mapless Buried Treasure
 
 # How To Use
 ## Setup
