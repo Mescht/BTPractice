@@ -6,7 +6,7 @@ tellraw @a {"text":"\n\n\n\n\n\n\n\n\n"}
 tellraw @a {"text":"----------Settings----------","color":"gray"}
 
 # Distance
-tellraw @a [{"text":"   BT Dist. ","color":"white"},{"text":"[-] ","color":"yellow","clickEvent":{"action":"run_command","value":"/function practice:settings/dist_decrease"}},{"score":{"name":"max_dist","objective":"settings"},"color":"gold"},{"text":" [+] ","color":"yellow","clickEvent":{"action":"run_command","value":"/function practice:settings/dist_increase"}}]
+tellraw @a [{"text":""},{"text":"   BT Dist. ","color":"white","hoverEvent":{"action":"show_text","contents":[{"text":"aproximate max. distance to BT"}]}},{"text":"[-] ","color":"yellow","clickEvent":{"action":"run_command","value":"/function practice:settings/dist_decrease"}},{"score":{"name":"max_dist","objective":"settings"},"color":"gold"},{"text":" [+] ","color":"yellow","clickEvent":{"action":"run_command","value":"/function practice:settings/dist_increase"}}]
 
 # Shovle
 execute if score shovel settings matches 1 run tellraw @a [{"text":"   Shovel ","color":"white"},{"text":"[Enabled]","color":"dark_green","clickEvent":{"action":"run_command","value":"/function practice:settings/toggle_shovel"}}]

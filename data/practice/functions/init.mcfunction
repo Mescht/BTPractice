@@ -10,6 +10,7 @@ scoreboard objectives add chest_opened minecraft.custom:minecraft.open_chest
 scoreboard objectives add timer dummy
 scoreboard objectives add relog minecraft.custom:minecraft.play_one_minute
 scoreboard objectives add settings dummy
+scoreboard objectives add s trigger
 
 # constants
 scoreboard players set 1200 c 1200

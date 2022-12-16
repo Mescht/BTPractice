@@ -18,7 +18,6 @@ execute if score active timer matches 1 run function practice:timer/timer
 
 execute as @a[scores={s=1..}] run function practice:settings/dialog
 
-tellraw @a[scores={relog=1}] [{"text":"/trigger s ","color":"gray","clickEvent":{"action":"run_command","value":"/function practice:settings/dialog"}},{"text":"for Settings Menu","color":"white","clickEvent":{"action":"run_command","value":"/function practice:settings/dialog"}}]
-tellraw @a[scores={relog=1}] {"text":"[To New BT]","color":"gold","clickEvent":{"action":"run_command","value":"/function practice:findbt"}}
+execute as @a[scores={relog=1}] run function practice:post_init
 
 effect give @a minecraft:saturation 10 100 true
