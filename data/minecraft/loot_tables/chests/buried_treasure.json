@@ -11,25 +11,6 @@
       ]
     },
     {
-      "rolls": 1,
-      "entries": [
-        {
-          "type": "minecraft:item",
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "min": 7.0,
-                "max": 20.0,
-                "type": "minecraft:uniform"
-              }
-            }
-          ],
-          "name": "minecraft:iron_ingot"
-        }
-      ]
-    },
-    {
       "rolls": {
         "min": 5.0,
         "max": 8.0,
@@ -49,7 +30,7 @@
               }
             }
           ],
-          "name": "minecraft:air"
+          "name": "minecraft:iron_ingot"
         },
         {
           "type": "minecraft:item",

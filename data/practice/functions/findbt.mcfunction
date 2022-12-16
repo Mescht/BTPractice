@@ -1,7 +1,7 @@
 clear @a
 gamemode spectator @a
 scoreboard players set i dist 0
-scoreboard players set @a chestOpened 0
+scoreboard players set @a chest_opened 0
 
 tellraw @a {"text":"Searching..."}
 
