@@ -9,6 +9,8 @@ execute if score max_dist settings matches 41..45 at 0-0-0-0-AEC run spreadplaye
 execute if score max_dist settings matches 46.. at 0-0-0-0-AEC run spreadplayers ~ ~ 0 50 false @a
 
 gamemode survival @a
+execute at @p run setworldspawn
+
 execute if score shovel settings matches 1 run replaceitem entity @a weapon.mainhand minecraft:golden_shovel{Unbreakable:1b}
 
 tellraw @a {"text":"Found BT!","color":"dark_green"}
