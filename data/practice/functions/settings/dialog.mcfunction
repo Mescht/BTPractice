@@ -8,9 +8,14 @@ tellraw @a {"text":"----------Settings----------","color":"gray"}
 # Distance
 tellraw @a [{"text":""},{"text":"   BT Dist. ","color":"white","hoverEvent":{"action":"show_text","contents":[{"text":"aproximate max. distance to BT"}]}},{"text":"[-] ","color":"yellow","clickEvent":{"action":"run_command","value":"/function practice:settings/dist_decrease"}},{"score":{"name":"max_dist","objective":"settings"},"color":"gold"},{"text":" [+] ","color":"yellow","clickEvent":{"action":"run_command","value":"/function practice:settings/dist_increase"}}]
 
-# Shovle
+# Shovel
 execute if score shovel settings matches 1 run tellraw @a [{"text":"   Shovel ","color":"white"},{"text":"[Enabled]","color":"dark_green","clickEvent":{"action":"run_command","value":"/function practice:settings/toggle_shovel"}}]
 execute if score shovel settings matches 0 run tellraw @a [{"text":"   Shovel ","color":"white"},{"text":"[Disabled]","color":"red","clickEvent":{"action":"run_command","value":"/function practice:settings/toggle_shovel"}}]
+
+# Loot
+execute as @a if score @s loot_preset matches 1 run tellraw @s [{"text":"   Loot ","color":"white"},{"text":"[7 Iron]","color":"gold","clickEvent":{"action":"run_command","value":"/function practice:settings/toggle_iron"}}]
+execute as @a if score @s loot_preset matches 2 run tellraw @s [{"text":"   Loot ","color":"white"},{"text":"[7 Iron + TNT]","color":"gold","clickEvent":{"action":"run_command","value":"/function practice:settings/toggle_iron"}}]
+execute as @a unless score @s loot_preset matches 1..2 run tellraw @s [{"text":"   Loot ","color":"white"},{"text":"[Vanilla]","color":"gold","clickEvent":{"action":"run_command","value":"/function practice:settings/toggle_iron"}}]
 
 # Debug
 execute if score debug settings matches 1 run tellraw @a [{"text":"   Debug ","color":"white"},{"text":"[Enabled]","color":"dark_green","clickEvent":{"action":"run_command","value":"/function practice:settings/toggle_debug"}}]
