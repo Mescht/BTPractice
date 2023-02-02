@@ -4,4 +4,6 @@ tellraw @a [{"text":"/trigger s ","color":"gray"},{"text":"for Settings Menu","c
 
 tellraw @a {"text":"[To New BT]","color":"gold","clickEvent":{"action":"run_command","value":"/function practice:findbt"}}
 
+execute as @a unless score @s loot_preset matches 0.. run scoreboard players set @s loot_preset 2
+
 scoreboard players enable @a s

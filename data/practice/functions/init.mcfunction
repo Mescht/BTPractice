@@ -29,7 +29,7 @@ scoreboard players set -100 c -100
 # default settings
 execute unless score shovel settings matches 0.. run scoreboard players set shovel settings 1
 execute unless score debug settings matches 0.. run scoreboard players set debug settings 0
-execute unless score max_dist settings matches 0.. run scoreboard players set max_dist settings 30
+execute unless score max_dist settings matches 0.. run scoreboard players set max_dist settings 35
 
 execute unless score reset_shovel settings matches 0.. run scoreboard players set reset_shovel settings 1
 execute unless score reset_hos settings matches 0.. run scoreboard players set reset_hos settings 1
@@ -37,8 +37,6 @@ execute unless score reset_fish settings matches 0.. run scoreboard players set 
 execute unless score reset_craftingtable settings matches 0.. run scoreboard players set reset_craftingtable settings 1
 execute unless score reset_openbt settings matches 0.. run scoreboard players set reset_openbt settings 0
 execute unless score reset_boat settings matches 0.. run scoreboard players set reset_boat settings 0
-
-execute as @a unless score @s loot_preset matches 0.. run scoreboard players set @s loot_preset 2
 
 # gamerules
 gamerule doDaylightCycle false

@@ -29,11 +29,11 @@ execute if score reset_shovel settings matches 0 run tellraw @a [{"text":"   Dro
 
 # HOS
 execute if score reset_hos settings matches 1 run tellraw @a [{"text":"   Drop HOS "},{"text":"[Enabled]","color":"dark_green","clickEvent":{"action":"run_command","value":"/function practice:settings/reset/toggle_hos"}}]
-execute if score reset_hos settings matches 0 run tellraw @a [{"text":"   Drop Hos "},{"text":"[Disabled]","color":"red","clickEvent":{"action":"run_command","value":"/function practice:settings/reset/toggle_hos"}}]
+execute if score reset_hos settings matches 0 run tellraw @a [{"text":"   Drop HOS "},{"text":"[Disabled]","color":"red","clickEvent":{"action":"run_command","value":"/function practice:settings/reset/toggle_hos"}}]
 
 # Fish
-execute if score reset_fish settings matches 1 run tellraw @a [{"text":"   Drop Fish "},{"text":"[Enabled]","color":"dark_green","clickEvent":{"action":"run_command","value":"/function practice:settings/reset/set_fish"}}]
-execute if score reset_fish settings matches 0 run tellraw @a [{"text":"   Drop Fish "},{"text":"[Disabled]","color":"red","clickEvent":{"action":"run_command","value":"/function practice:settings/reset/set_fish"}}]
+execute if score reset_fish settings matches 1 run tellraw @a [{"text":"   Drop Fish "},{"text":"[Enabled]","color":"dark_green","clickEvent":{"action":"run_command","value":"/function practice:settings/reset/toggle_fish"}}]
+execute if score reset_fish settings matches 0 run tellraw @a [{"text":"   Drop Fish "},{"text":"[Disabled]","color":"red","clickEvent":{"action":"run_command","value":"/function practice:settings/reset/toggle_fish"}}]
 
 # Crafting Table
 execute if score reset_craftingtable settings matches 1 run tellraw @a [{"text":"   Mine Crafting Table "},{"text":"[Enabled]","color":"dark_green","clickEvent":{"action":"run_command","value":"/function practice:settings/reset/toggle_craftingtable"}}]
