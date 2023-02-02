@@ -3,7 +3,10 @@ Map / Datapack for practicing Mapless Buried Treasure
 
 
 # How To Use
+Short Demo [Video](https://youtu.be/mRMIO4wOPyA)
+
 Warning! World files can get quiet large with this datapack. To clear them out you can just delete the entire **region** folder
+
 ## Setup
 You can either 
 - download BTPractice-Map.zip and unpack it your saves folder 
