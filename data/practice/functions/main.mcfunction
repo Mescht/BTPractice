@@ -16,7 +16,7 @@ execute as @a[scores={chest_opened=1}] run function practice:btopened
 
 execute if score active timer matches 1 run function practice:timer/timer
 
-execute as @a[scores={s=1..}] run function practice:settings/dialog
+execute as @a[scores={s=1..}] run function practice:show_bt/run
 
 execute as @a[scores={relog=1}] run function practice:post_init
 

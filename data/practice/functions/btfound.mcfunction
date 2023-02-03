@@ -1,3 +1,5 @@
+function practice:chunkalign
+
 execute if score max_dist settings matches ..10 at 0-0-0-0-AEC run spreadplayers ~ ~ 0 10 false @a
 execute if score max_dist settings matches 10..15 at 0-0-0-0-AEC run spreadplayers ~ ~ 0 15 false @a
 execute if score max_dist settings matches 16..20 at 0-0-0-0-AEC run spreadplayers ~ ~ 0 20 false @a

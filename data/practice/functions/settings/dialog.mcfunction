@@ -1,6 +1,3 @@
-scoreboard players reset @a s
-scoreboard players enable @a s
-
 tellraw @a {"text":"\n\n\n\n\n\n\n\n\n"}
 
 tellraw @a {"text":"----------Settings----------","color":"gray"}

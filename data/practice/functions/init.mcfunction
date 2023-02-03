@@ -20,7 +20,9 @@ scoreboard players set 100 c 100
 scoreboard players set 60 c 60
 scoreboard players set 50 c 50
 scoreboard players set 20 c 20
+scoreboard players set 16 c 16
 scoreboard players set 10 c 10
+scoreboard players set 9 c 9
 scoreboard players set 5 c 5
 scoreboard players set 3 c 3
 scoreboard players set 2 c 2
