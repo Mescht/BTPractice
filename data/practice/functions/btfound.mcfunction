@@ -16,7 +16,7 @@ execute at @p run setworldspawn
 execute if score shovel settings matches 1 run replaceitem entity @a weapon.mainhand minecraft:golden_shovel{Unbreakable:1b}
 
 tellraw @a {"text":"Found BT!","color":"dark_green"}
-tellraw @a [{"text":"[To New BT]","color":"gold","clickEvent":{"action":"run_command","value":"/function practice:findbt"}}, {"text":" [Settings]","color":"gray","clickEvent":{"action":"run_command","value":"/function practice:settings/dialog"}}]
+tellraw @a [{"text":"[To New BT]","color":"gold","clickEvent":{"action":"run_command","value":"/function practice:findbt"},"hoverEvent":{"action":"show_text","contents":[{"text":"Go To New BT"}]}}, {"text":" [Settings]","color":"gray","clickEvent":{"action":"run_command","value":"/function practice:settings/dialog"},"hoverEvent":{"action":"show_text","contents":[{"text":"Show Settings Menu"}]}}, {"text":" [Reveal]","color":"#d96c6c","clickEvent":{"action":"run_command","value":"/function practice:show_bt/run"},"hoverEvent":{"action":"show_text","contents":[{"text":"Reveal BT Location"}]}}]
 
 execute as @p at @s store result score d dist run locate buried_treasure
 execute if score debug settings matches 1 run tellraw @a [{"text":"Distance to BT: "},{"score":{"name":"d","objective":"dist"},"color":"green"},{"text":" Blocks"}]

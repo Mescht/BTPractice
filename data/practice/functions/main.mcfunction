@@ -20,4 +20,6 @@ execute as @a[scores={s=1..}] run function practice:show_bt/run
 
 execute as @a[scores={relog=1}] run function practice:post_init
 
+execute as @a run function practice:target_chest
+
 effect give @a minecraft:saturation 10 100 true
