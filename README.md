@@ -9,11 +9,12 @@ Warning! World files can get quiet large with this datapack. To clear them out y
 
 ## Setup
 You can either 
-- download BTPractice-Map.zip and unpack it your saves folder 
+- download BTPractice-Map.zip and unpack it in your saves folder 
 
 OR 
 - download BTPractice-Datapack.zip and use the datapack with an existing world (cheats must be enabled)
 
 ## Settings Menu
+Interact with the menu by clicking in chat
 
-![image](https://user-images.githubusercontent.com/36821728/208164788-2a498300-acd9-419c-bf45-1ef8ff5abaa4.png)
+![Settings Menu](https://github.com/Mescht/BTPractice/assets/36821728/642db0ea-e48b-4fd2-9816-842ccfaef295)
