@@ -1,4 +1,4 @@
-# set up scorebaords
+# set up scoreboards
 scoreboard objectives add c dummy
 scoreboard objectives add dist dummy
 scoreboard objectives add reset_hos minecraft.dropped:heart_of_the_sea
@@ -12,6 +12,7 @@ scoreboard objectives add relog minecraft.custom:minecraft.play_one_minute
 scoreboard objectives add settings dummy
 scoreboard objectives add s trigger
 scoreboard objectives add loot_preset dummy
+scoreboard objectives add pos dummy
 
 # constants
 scoreboard players set 1200 c 1200
