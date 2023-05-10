@@ -8,6 +8,8 @@ Short Demo [Video](https://youtu.be/kI5G3Cwn0M4)
 Warning! World files can get quiet large with this datapack. To clear them out you can just delete the entire **region** folder
 
 ## Setup
+[DOWNLOADS](https://github.com/Mescht/BTPractice/releases/latest)
+
 You can either 
 - download `BTPractice-Map.zip` and unpack it in your saves folder 
 
