@@ -9,10 +9,10 @@ Warning! World files can get quiet large with this datapack. To clear them out y
 
 ## Setup
 You can either 
-- download BTPractice-Map.zip and unpack it in your saves folder 
+- download `BTPractice-Map.zip` and unpack it in your saves folder 
 
 OR 
-- download BTPractice-Datapack.zip and use the datapack with an existing world (cheats must be enabled)
+- download `BTPractice-Datapack.zip` and use the datapack with an existing world (cheats must be enabled)
 
 ## Settings Menu
 Interact with the menu by clicking in chat
