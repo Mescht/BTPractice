@@ -3,7 +3,7 @@ Map / Datapack for practicing Mapless Buried Treasure
 
 
 # How To Use
-Short Demo [Video](https://youtu.be/mRMIO4wOPyA)
+Short Demo [Video](https://youtu.be/kI5G3Cwn0M4)
 
 Warning! World files can get quiet large with this datapack. To clear them out you can just delete the entire **region** folder
 
