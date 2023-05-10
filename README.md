@@ -17,4 +17,4 @@ OR
 ## Settings Menu
 Interact with the menu by clicking in chat
 
-![Settings Menu](https://github.com/Mescht/BTPractice/assets/36821728/642db0ea-e48b-4fd2-9816-842ccfaef295)
+![Settings Menu](https://github.com/Mescht/BTPractice/assets/36821728/2ebdb893-2c6c-49f7-af20-959c7756a02c)
