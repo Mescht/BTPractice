@@ -27,6 +27,7 @@ scoreboard players set 16 c 16
 scoreboard players set 10 c 10
 scoreboard players set 9 c 9
 scoreboard players set 5 c 5
+scoreboard players set 4 c 4
 scoreboard players set 3 c 3
 scoreboard players set 2 c 2
 scoreboard players set -100 c -100
@@ -46,6 +47,10 @@ execute unless score reset_boat settings matches 0.. run scoreboard players set 
 execute as @a unless score @s loot_preset matches 0.. run scoreboard players set @s loot_preset 0
 
 execute unless score compare_to settings matches 0.. run scoreboard players set compare_to settings 0
+execute unless score show_pace settings matches 0.. run scoreboard players set show_pace settings 0
+
+execute unless score found records matches 0.. run scoreboard players set found records 0
+execute unless score attempted records matches 0.. run scoreboard players set attempted records 0
 
 # gamerules
 gamerule doDaylightCycle false

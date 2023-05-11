@@ -25,6 +25,6 @@ execute if score sign timer_diff matches -1 run data modify storage practice:tim
 data modify storage practice:timeparser time_string set value "[{\"color\":\"gold\",\"nbt\":\"minutes\",\"storage\":\"practice:timeparser\",\"interpret\":true},{\"nbt\":\"seconds\",\"storage\":\"practice:timeparser\",\"interpret\":true}]"
 
 # assemble time diff string
-execute unless score compare timer_diff matches 1.. run data modify storage practice:timeparser time_diff_string set value "{\"text\":\"\"}"
+execute unless score compare timer_diff matches 1.. run data modify storage practice:timeparser time_diff_string set value "{\"text\":\"\",\"color\":\"gray\"}"
 
 execute if score compare timer_diff matches 1.. run data modify storage practice:timeparser time_diff_string set value "[[{\"color\":\"gray\",\"text\":\" [\"}],[{\"nbt\":\"diff_sign\",\"storage\":\"practice:timeparser\",\"interpret\":true},{\"nbt\":\"diff_minutes\",\"storage\":\"practice:timeparser\",\"interpret\":true},{\"nbt\":\"diff_seconds\",\"storage\":\"practice:timeparser\",\"interpret\":true}],[{\"color\":\"gray\",\"text\":\"]\"}]]"

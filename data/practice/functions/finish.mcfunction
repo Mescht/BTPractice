@@ -1,5 +1,5 @@
 title @a title {"nbt":"time_string","storage":"practice:timeparser","interpret":true}
-title @a subtitle [{"nbt":"time_diff_string","storage":"practice:timeparser","interpret":true},{"text":" "},{"nbt":"compare_to","storage":"practice:timeparser"}]
+execute if score show_pace settings matches 0..2 run title @a subtitle {"nbt":"time_diff_string","storage":"practice:timeparser","interpret":true}
 
 execute unless score pb_finished records matches 0.. run function practice:timer/new_pb_finished
 execute if score pb_finished records > timer timer run function practice:timer/new_pb_finished

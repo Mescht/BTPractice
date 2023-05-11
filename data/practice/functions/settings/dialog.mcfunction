@@ -1,3 +1,5 @@
+execute at @a run playsound minecraft:ui.button.click master @a ~ ~ ~ 1 1.2
+
 tellraw @a {"text":"\n\n\n\n\n\n\n\n\n"}
 
 tellraw @a {"text":"----------Settings----------","color":"gray"}
@@ -51,8 +53,12 @@ execute if score compare_to settings matches 0 run tellraw @a [{"text":"   Compa
 execute if score compare_to settings matches 1 run tellraw @a [{"text":"   Compare To "},{"text":"[Best]","color":"gold","clickEvent":{"action":"run_command","value":"/function practice:settings/toggle_compare"}}]
 execute if score compare_to settings matches 2 run tellraw @a [{"text":"   Compare To "},{"text":"[None]","color":"gold","clickEvent":{"action":"run_command","value":"/function practice:settings/toggle_compare"}}]
 
-# Reset PB
-tellraw @a {"text":"   [Reset PB]","color":"red","clickEvent":{"action":"run_command","value":"/function practice:settings/reset_pb_dialog"}}
-tellraw @a {"text":"   [Reset All Recrods]","color":"red","clickEvent":{"action":"run_command","value":"/function practice:settings/reset_records_dialog"}}
+# Show comparison
+execute if score show_pace settings matches 0 run tellraw @a [{"text":"   Show Pace "},{"text":"[Always]","color":"gold","clickEvent":{"action":"run_command","value":"/function practice:settings/toggle_show_pace"}}]
+execute if score show_pace settings matches 1 run tellraw @a [{"text":"   Show Pace "},{"text":"[Open BT & Finish]","color":"gold","clickEvent":{"action":"run_command","value":"/function practice:settings/toggle_show_pace"}}]
+execute if score show_pace settings matches 2 run tellraw @a [{"text":"   Show Pace "},{"text":"[Only Finish]","color":"gold","clickEvent":{"action":"run_command","value":"/function practice:settings/toggle_show_pace"}}]
+execute if score show_pace settings matches 3 run tellraw @a [{"text":"   Show Pace "},{"text":"[Never]","color":"gold","clickEvent":{"action":"run_command","value":"/function practice:settings/toggle_show_pace"}}]
 
-tellraw @a {"text":"\n[To New BT]","color":"gold","clickEvent":{"action":"run_command","value":"/function practice:findbt"}}
+tellraw @a {"text":""}
+
+tellraw @a {"text":"[To New BT]","color":"gold","clickEvent":{"action":"run_command","value":"/function practice:findbt"},"hoverEvent":{"action":"show_text","contents":[{"text":"Go To New BT"}]}}

@@ -16,7 +16,8 @@ execute at @p run setworldspawn
 execute if score shovel settings matches 1 run replaceitem entity @a weapon.mainhand minecraft:golden_shovel{Unbreakable:1b}
 
 tellraw @a {"text":"Found BT!","color":"dark_green"}
-tellraw @a [{"text":"[To New BT]","color":"gold","clickEvent":{"action":"run_command","value":"/function practice:findbt"},"hoverEvent":{"action":"show_text","contents":[{"text":"Go To New BT"}]}}, {"text":" [Settings]","color":"gray","clickEvent":{"action":"run_command","value":"/function practice:settings/dialog"},"hoverEvent":{"action":"show_text","contents":[{"text":"Show Settings Menu"}]}}, {"text":" [Reveal]","color":"#d96c6c","clickEvent":{"action":"run_command","value":"/function practice:show_bt/run"},"hoverEvent":{"action":"show_text","contents":[{"text":"Reveal BT Location"}]}}]
+tellraw @a [{"text":"[To New BT]","color":"gold","clickEvent":{"action":"run_command","value":"/function practice:findbt"},"hoverEvent":{"action":"show_text","contents":[{"text":"Go To New BT"}]}}, {"text":" [Reveal]","color":"#d96c6c","clickEvent":{"action":"run_command","value":"/function practice:show_bt/run"},"hoverEvent":{"action":"show_text","contents":[{"text":"Reveal BT Location"}]}}]
+tellraw @a [{"text":"[Settings]","color":"gray","clickEvent":{"action":"run_command","value":"/function practice:settings/dialog"},"hoverEvent":{"action":"show_text","contents":[{"text":"Show Settings Menu"}]}}, {"text":" [Stats]","color":"gray","clickEvent":{"action":"run_command","value":"/function practice:stats"},"hoverEvent":{"action":"show_text","contents":[{"text":"Show Stats"}]}}]
 
 execute as @p at @s store result score d dist run locate buried_treasure
 execute if score debug settings matches 1 run tellraw @a [{"text":"Distance to BT: "},{"score":{"name":"d","objective":"dist"},"color":"green"},{"text":" Blocks"}]
@@ -36,3 +37,5 @@ scoreboard players add attempted records 1
 execute if score compare_to settings matches 0 run scoreboard players operation compare timer_diff = avg_found records
 execute if score compare_to settings matches 1 run scoreboard players operation compare timer_diff = pb_found records
 execute if score compare_to settings matches 2 run scoreboard players set compare timer_diff 0
+
+execute at @a run playsound minecraft:entity.experience_orb.pickup master @a ~ ~ ~ 1 1

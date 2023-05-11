@@ -12,7 +12,8 @@ scoreboard players add found records 1
 
 scoreboard players operation avg_found records /= found records
 
-title @a subtitle [[{"nbt":"time_string","storage":"practice:timeparser","interpret":true}],[{"nbt":"time_diff_string","storage":"practice:timeparser","interpret":true},{"text":" "},{"nbt":"compare_to","storage":"practice:timeparser"}]]
+execute if score show_pace settings matches 0..1 run title @a subtitle [[{"nbt":"time_string","storage":"practice:timeparser","interpret":true}],[{"nbt":"time_diff_string","storage":"practice:timeparser","interpret":true}]]
+execute unless score show_pace settings matches 0..1 run title @a subtitle [[{"nbt":"time_string","storage":"practice:timeparser","interpret":true}]]
 
 
 title @a title {"text":""}

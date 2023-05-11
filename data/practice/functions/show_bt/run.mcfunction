@@ -1,3 +1,5 @@
+execute at @a run playsound minecraft:entity.enderman.teleport master @a ~ ~ ~ 1 1
+
 tp 0-0-0-0-B00 0-0-0-0-AEC
 execute at 0-0-0-0-AEC unless entity 0-0-0-0-B00 run summon armor_stand ~ ~ ~ {UUID:[I;0,0,0,2816],NoGravity:1b,Invulnerable:1b,Glowing:1b,Marker:1b,Invisible:1b,ArmorItems:[{},{},{},{id:"minecraft:chest",Count:1b}]}
 
