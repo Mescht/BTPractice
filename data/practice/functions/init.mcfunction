@@ -1,4 +1,4 @@
-# set up scoreboards
+# set up scorebaords
 scoreboard objectives add c dummy
 scoreboard objectives add dist dummy
 scoreboard objectives add reset_hos minecraft.dropped:heart_of_the_sea
@@ -8,11 +8,13 @@ scoreboard objectives add reset_salmon minecraft.dropped:minecraft.cooked_salmon
 scoreboard objectives add reset_ctable minecraft.mined:minecraft.crafting_table
 scoreboard objectives add chest_opened minecraft.custom:minecraft.open_chest
 scoreboard objectives add timer dummy
+scoreboard objectives add timer_diff dummy
 scoreboard objectives add relog minecraft.custom:minecraft.play_one_minute
 scoreboard objectives add settings dummy
 scoreboard objectives add s trigger
 scoreboard objectives add loot_preset dummy
 scoreboard objectives add pos dummy
+scoreboard objectives add records dummy
 
 # constants
 scoreboard players set 1200 c 1200
@@ -41,10 +43,14 @@ execute unless score reset_craftingtable settings matches 0.. run scoreboard pla
 execute unless score reset_openbt settings matches 0.. run scoreboard players set reset_openbt settings 0
 execute unless score reset_boat settings matches 0.. run scoreboard players set reset_boat settings 0
 
+execute as @a unless score @s loot_preset matches 0.. run scoreboard players set @s loot_preset 0
+
+execute unless score compare_to settings matches 0.. run scoreboard players set compare_to settings 0
+
 # gamerules
 gamerule doDaylightCycle false
 gamerule doWeatherCycle false
-gamerule sendCommandFeedback false
+execute unless score debug settings matches 1 run gamerule sendCommandFeedback false
 gamerule spectatorsGenerateChunks false
 gamerule keepInventory true
 

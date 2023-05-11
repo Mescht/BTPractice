@@ -44,4 +44,15 @@ execute if score reset_boat settings matches 0 run tellraw @a [{"text":"   Enter
 execute if score reset_openbt settings matches 1 run tellraw @a [{"text":"   Open BT "},{"text":"[Enabled]","color":"dark_green","clickEvent":{"action":"run_command","value":"/function practice:settings/reset/toggle_openbt"}}]
 execute if score reset_openbt settings matches 0 run tellraw @a [{"text":"   Open BT "},{"text":"[Disabled]","color":"red","clickEvent":{"action":"run_command","value":"/function practice:settings/reset/toggle_openbt"}}]
 
+tellraw @a {"text":"\nTiming Settings","color":"gray"}
+
+# Compare
+execute if score compare_to settings matches 0 run tellraw @a [{"text":"   Compare To "},{"text":"[Average]","color":"gold","clickEvent":{"action":"run_command","value":"/function practice:settings/toggle_compare"}}]
+execute if score compare_to settings matches 1 run tellraw @a [{"text":"   Compare To "},{"text":"[Best]","color":"gold","clickEvent":{"action":"run_command","value":"/function practice:settings/toggle_compare"}}]
+execute if score compare_to settings matches 2 run tellraw @a [{"text":"   Compare To "},{"text":"[None]","color":"gold","clickEvent":{"action":"run_command","value":"/function practice:settings/toggle_compare"}}]
+
+# Reset PB
+tellraw @a {"text":"   [Reset PB]","color":"red","clickEvent":{"action":"run_command","value":"/function practice:settings/reset_pb_dialog"}}
+tellraw @a {"text":"   [Reset All Recrods]","color":"red","clickEvent":{"action":"run_command","value":"/function practice:settings/reset_records_dialog"}}
+
 tellraw @a {"text":"\n[To New BT]","color":"gold","clickEvent":{"action":"run_command","value":"/function practice:findbt"}}

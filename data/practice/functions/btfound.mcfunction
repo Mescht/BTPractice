@@ -25,5 +25,14 @@ execute if score debug settings matches 1 run tellraw @a [{"text":"Steps: "},{"s
 execute if score d dist matches 64.. run tellraw @a [{"text":"Teleportation failed for unknown reason\nRetrying...","color":"red"}]
 execute if score d dist matches 64.. run function practice:findbt
 
+scoreboard players set loaded settings 0
+
 scoreboard players set active timer 1
-scoreboard players set timer timer 0
+scoreboard players set timer timer -1
+
+scoreboard players add attempted records 1
+
+# set compare time
+execute if score compare_to settings matches 0 run scoreboard players operation compare timer_diff = avg_found records
+execute if score compare_to settings matches 1 run scoreboard players operation compare timer_diff = pb_found records
+execute if score compare_to settings matches 2 run scoreboard players set compare timer_diff 0

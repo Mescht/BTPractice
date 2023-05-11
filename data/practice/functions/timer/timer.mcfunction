@@ -3,10 +3,8 @@ execute if score active timer matches 1 run scoreboard players add timer timer 1
 
 # display timer in actionbar
 function practice:timer/calculate_units
-execute if score minutes timer matches 0 if score thousth timer matches ..9 run title @a actionbar [{"color":"gold","score":{"name":"seconds","objective":"timer"}},{"text":".0"},{"score":{"name":"thousth","objective":"timer"}},{"text":"s"}]
+function practice:timer/parser
 
-execute if score minutes timer matches 0 if score thousth timer matches 10.. run title @a actionbar [{"color":"gold","score":{"name":"seconds","objective":"timer"}},{"text":"."},{"score":{"name":"thousth","objective":"timer"}},{"text":"s"}]
+#title @a actionbar [[{"color":"gold","nbt":"minutes","storage":"practice:timeparser","interpret":true},{"nbt":"seconds","storage":"practice:timeparser","interpret":true}],[{"color":"gray","text":" ["}],[{"nbt":"diff_sign","storage":"practice:timeparser","interpret":true},{"nbt":"diff_minutes","storage":"practice:timeparser","interpret":true},{"nbt":"diff_seconds","storage":"practice:timeparser","interpret":true}],[{"color":"gray","text":"]"}]]
 
-execute if score minutes timer matches 1.. if score thousth timer matches ..9 run title @a actionbar [{"color":"gold","score":{"name":"minutes","objective":"timer"}},{"text":"m "},{"score":{"name":"seconds","objective":"timer"}},{"text":".0"},{"score":{"name":"thousth","objective":"timer"}},{"text":"s"}]
-
-execute if score minutes timer matches 1.. if score thousth timer matches 10.. run title @a actionbar [{"color":"gold","score":{"name":"minutes","objective":"timer"}},{"text":"m "},{"score":{"name":"seconds","objective":"timer"}},{"text":"."},{"score":{"name":"thousth","objective":"timer"}},{"text":"s"}]
+title @a actionbar [{"nbt":"time_string","storage":"practice:timeparser","interpret":true},{"nbt":"time_diff_string","storage":"practice:timeparser","interpret":true}]

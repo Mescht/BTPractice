@@ -1,10 +1,15 @@
-execute if score minutes timer matches 0 if score thousth timer matches ..9 run title @a title [{"color":"gold","score":{"name":"seconds","objective":"timer"}},{"text":".0"},{"score":{"name":"thousth","objective":"timer"}},{"text":"s"}]
+title @a title {"nbt":"time_string","storage":"practice:timeparser","interpret":true}
+title @a subtitle [{"nbt":"time_diff_string","storage":"practice:timeparser","interpret":true},{"text":" "},{"nbt":"compare_to","storage":"practice:timeparser"}]
 
-execute if score minutes timer matches 0 if score thousth timer matches 10.. run title @a title [{"color":"gold","score":{"name":"seconds","objective":"timer"}},{"text":"."},{"score":{"name":"thousth","objective":"timer"}},{"text":"s"}]
+execute unless score pb_finished records matches 0.. run function practice:timer/new_pb_finished
+execute if score pb_finished records > timer timer run function practice:timer/new_pb_finished
 
-execute if score minutes timer matches 1.. if score thousth timer matches ..9 run title @a title [{"color":"gold","score":{"name":"minutes","objective":"timer"}},{"text":"m "},{"score":{"name":"seconds","objective":"timer"}},{"text":".0"},{"score":{"name":"thousth","objective":"timer"}},{"text":"s"}]
+scoreboard players operation avg_finished records *= finished records
+scoreboard players operation avg_finished records += timer timer
 
-execute if score minutes timer matches 1.. if score thousth timer matches 10.. run title @a title [{"color":"gold","score":{"name":"minutes","objective":"timer"}},{"text":"m "},{"score":{"name":"seconds","objective":"timer"}},{"text":"."},{"score":{"name":"thousth","objective":"timer"}},{"text":"s"}]
+scoreboard players add finished records 1
+
+scoreboard players operation avg_finished records /= finished records
 
 scoreboard players set @a reset_ctable 0
 scoreboard players set @a chest_opened 0

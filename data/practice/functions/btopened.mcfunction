@@ -2,12 +2,22 @@ clear @a minecraft:golden_shovel
 
 scoreboard players set @a chest_opened 2
 
-execute if score minutes timer matches 0 if score thousth timer matches ..9 run title @a subtitle [{"color":"gold","score":{"name":"seconds","objective":"timer"}},{"text":".0"},{"score":{"name":"thousth","objective":"timer"}},{"text":"s"}]
+execute unless score pb_found records matches 0.. run function practice:timer/new_pb_found
+execute if score pb_found records > timer timer run function practice:timer/new_pb_found
 
-execute if score minutes timer matches 0 if score thousth timer matches 10.. run title @a subtitle [{"color":"gold","score":{"name":"seconds","objective":"timer"}},{"text":"."},{"score":{"name":"thousth","objective":"timer"}},{"text":"s"}]
+scoreboard players operation avg_found records *= found records
+scoreboard players operation avg_found records += timer timer
 
-execute if score minutes timer matches 1.. if score thousth timer matches ..9 run title @a subtitle [{"color":"gold","score":{"name":"minutes","objective":"timer"}},{"text":"m "},{"score":{"name":"seconds","objective":"timer"}},{"text":".0"},{"score":{"name":"thousth","objective":"timer"}},{"text":"s"}]
+scoreboard players add found records 1
 
-execute if score minutes timer matches 1.. if score thousth timer matches 10.. run title @a subtitle [{"color":"gold","score":{"name":"minutes","objective":"timer"}},{"text":"m "},{"score":{"name":"seconds","objective":"timer"}},{"text":"."},{"score":{"name":"thousth","objective":"timer"}},{"text":"s"}]
+scoreboard players operation avg_found records /= found records
+
+title @a subtitle [[{"nbt":"time_string","storage":"practice:timeparser","interpret":true}],[{"nbt":"time_diff_string","storage":"practice:timeparser","interpret":true},{"text":" "},{"nbt":"compare_to","storage":"practice:timeparser"}]]
+
 
 title @a title {"text":""}
+
+# set compare time
+execute if score compare_to settings matches 0 run scoreboard players operation compare timer_diff = avg_finished records
+execute if score compare_to settings matches 1 run scoreboard players operation compare timer_diff = pb_finished records
+execute if score compare_to settings matches 2 run scoreboard players set compare timer_diff 0
