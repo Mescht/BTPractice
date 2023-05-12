@@ -14,4 +14,4 @@ scoreboard players operation avg_finished records /= finished records
 scoreboard players set @a reset_ctable 0
 scoreboard players set @a chest_opened 0
 kill @e[type=boat]
-function practice:findbt
+function practice:locate/findbt

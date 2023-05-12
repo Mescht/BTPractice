@@ -15,7 +15,6 @@ scoreboard players operation avg_found records /= found records
 execute if score show_pace settings matches 0..1 run title @a subtitle [[{"nbt":"time_string","storage":"practice:timeparser","interpret":true}],[{"nbt":"time_diff_string","storage":"practice:timeparser","interpret":true}]]
 execute unless score show_pace settings matches 0..1 run title @a subtitle [[{"nbt":"time_string","storage":"practice:timeparser","interpret":true}]]
 
-
 title @a title {"text":""}
 
 # set compare time

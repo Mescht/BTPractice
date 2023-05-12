@@ -1,0 +1,1 @@
+tellraw @a {"text":"[To New BT]","color":"gold","clickEvent":{"action":"run_command","value":"/function practice:locate/findbt"},"hoverEvent":{"action":"show_text","contents":[{"text":"Go To New BT"}]}}
