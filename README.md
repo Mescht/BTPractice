@@ -1,11 +1,12 @@
 # BTPractice
 Map / Datapack for practicing Mapless Buried Treasure
 
+Made for **Minecraft 1.16.1**
 
 # How To Use
 Short Demo [Video](https://youtu.be/kI5G3Cwn0M4)
 
-Warning! World files can get quiet large with this datapack. To clear them out you can just delete the entire **region** folder
+Warning! World files can get quiet large with this datapack. To clear them out you can just delete the entire **region** folder.
 
 ## Setup
 [DOWNLOADS](https://github.com/Mescht/BTPractice/releases/latest)
