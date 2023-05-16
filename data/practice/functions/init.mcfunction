@@ -11,10 +11,10 @@ scoreboard objectives add timer dummy
 scoreboard objectives add timer_diff dummy
 scoreboard objectives add relog minecraft.custom:minecraft.play_one_minute
 scoreboard objectives add settings dummy
-scoreboard objectives add s trigger
 scoreboard objectives add loot_preset dummy
 scoreboard objectives add pos dummy
 scoreboard objectives add records dummy
+scoreboard objectives add flags dummy
 
 # constants
 scoreboard players set 1200 c 1200

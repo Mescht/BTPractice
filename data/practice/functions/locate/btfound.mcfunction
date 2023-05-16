@@ -34,6 +34,8 @@ scoreboard players set timer timer -1
 
 scoreboard players add attempted records 1
 
+scoreboard players reset revealed flags
+
 # set compare time
 execute if score compare_to settings matches 0 run scoreboard players operation compare timer_diff = avg_found records
 execute if score compare_to settings matches 1 run scoreboard players operation compare timer_diff = pb_found records

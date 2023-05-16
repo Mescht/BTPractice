@@ -4,5 +4,3 @@ function practice:menu/dialog_new_bt
 function practice:menu/dialog_settings_and_stats
 
 execute as @a unless score @s loot_preset matches 0.. run scoreboard players set @s loot_preset 2
-
-scoreboard players enable @a s
